@@ -1,16 +1,13 @@
-# This is a sample Python script.
+def celsius_to_kelvin(temperature):
+    return temperature + 273.15
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    with open("input.txt", "r") as file:
+        lines = file.readlines()
+        temperatures = []
+        for line in lines:
+            temperature = float(line.strip())
+            temperatures.append(temperature)
+        print(lines)
+        print(temperatures)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

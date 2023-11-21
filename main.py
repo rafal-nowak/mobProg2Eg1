@@ -1,6 +1,9 @@
 def celsius_to_kelvin(temperature):
     return temperature + 273.15
 
+def celsius_to_fahrenheit(temperature):
+    return temperature * 1.8 + 32
+
 if __name__ == '__main__':
     with open("input.txt", "r") as file, open("result.txt", "w") as result:
         lines = file.readlines()
@@ -10,6 +13,6 @@ if __name__ == '__main__':
             temperatures.append(temperature)
         print(lines)
         print(temperatures)
-        result.write("Celsius; Kelvin\n")
+        result.write("Celsius; Kelvin; Fahrenheit\n")
         for temperature in temperatures:
-            result.write(f"{temperature}; {celsius_to_kelvin(temperature)}\n")
+            result.write(f"{temperature:.2f}; {celsius_to_kelvin(temperature):.2f}; {celsius_to_fahrenheit(temperature):.2f}\n")

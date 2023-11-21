@@ -11,4 +11,5 @@ if __name__ == '__main__':
         print(lines)
         print(temperatures)
         result.write("Celsius; Kelvin\n")
-
+        for temperature in temperatures:
+            result.write(f"{temperature}; {celsius_to_kelvin(temperature)}\n")
